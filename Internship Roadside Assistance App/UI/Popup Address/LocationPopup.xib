@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationPopup" customModule="Internship_Roadside_Assistance_App" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="ynB-eO-wtJ" id="pb4-je-BKy"/>
+                <outlet property="popupView" destination="iN0-l3-epB" id="E0m-cj-Yd3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bubble.middle.bottom.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6wJ-c3-AhK" userLabel="addressLabelImage">
+                    <rect key="frame" x="92" y="45" width="230" height="199.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="230" id="H8R-4H-atM"/>
+                        <constraint firstAttribute="height" constant="200" id="INA-4J-HD2"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-X9-9UK">
+                    <rect key="frame" x="199" y="238.5" width="16.5" height="20"/>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYJ-Vl-U3c">
+                    <rect key="frame" x="92" y="44" width="230" height="176"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" placeholderIntrinsicWidth="204" placeholderIntrinsicHeight="48" text="Use this location when you call for assistance" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qu-X3-39d" userLabel="Warning">
+                            <rect key="frame" x="20" y="103" width="190" height="48"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                            <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Your Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-WK-e54">
+                            <rect key="frame" x="20" y="15" width="190" height="18"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="204" placeholderIntrinsicHeight="70" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynB-eO-wtJ" userLabel="Address Label">
+                            <rect key="frame" x="20" y="33" width="190" height="70"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Getting your location... ">
+                                    <attributes>
+                                        <color key="NSColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <font key="NSFont" size="15" name="HelveticaNeue-Light"/>
+                                        <font key="NSOriginalFont" size="15" name="HelveticaNeue-Light"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6Qu-X3-39d" secondAttribute="bottom" constant="25" id="1VK-lw-1id"/>
+                        <constraint firstItem="6Qu-X3-39d" firstAttribute="leading" secondItem="aYJ-Vl-U3c" secondAttribute="leading" constant="20" id="7wI-nn-qwf"/>
+                        <constraint firstItem="ynB-eO-wtJ" firstAttribute="leading" secondItem="aYJ-Vl-U3c" secondAttribute="leading" constant="20" id="AtY-ao-F8f"/>
+                        <constraint firstItem="6Qu-X3-39d" firstAttribute="top" secondItem="ynB-eO-wtJ" secondAttribute="bottom" id="Maa-O6-6K3"/>
+                        <constraint firstAttribute="trailing" secondItem="JWx-WK-e54" secondAttribute="trailing" constant="20" id="RwF-QP-pU7"/>
+                        <constraint firstAttribute="trailing" secondItem="ynB-eO-wtJ" secondAttribute="trailing" constant="20" id="Vqn-X0-VQQ"/>
+                        <constraint firstAttribute="trailing" secondItem="6Qu-X3-39d" secondAttribute="trailing" constant="20" id="bHh-bk-hWb"/>
+                        <constraint firstItem="JWx-WK-e54" firstAttribute="leading" secondItem="aYJ-Vl-U3c" secondAttribute="leading" constant="20" id="sbR-wp-3th"/>
+                        <constraint firstItem="JWx-WK-e54" firstAttribute="top" secondItem="aYJ-Vl-U3c" secondAttribute="top" constant="15" id="v8V-IL-1i3"/>
+                        <constraint firstItem="ynB-eO-wtJ" firstAttribute="top" secondItem="JWx-WK-e54" secondAttribute="bottom" id="wnh-aT-tof"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="xRq-nm-jLd"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aYJ-Vl-U3c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0ak-Ck-lV7"/>
+                <constraint firstItem="BNF-X9-9UK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FLa-dC-W6x"/>
+                <constraint firstItem="aYJ-Vl-U3c" firstAttribute="top" secondItem="xRq-nm-jLd" secondAttribute="top" id="MDg-Ho-58x"/>
+                <constraint firstItem="BNF-X9-9UK" firstAttribute="top" secondItem="6wJ-c3-AhK" secondAttribute="bottom" constant="-5" id="OPs-LW-eOW"/>
+                <constraint firstItem="6wJ-c3-AhK" firstAttribute="leading" secondItem="aYJ-Vl-U3c" secondAttribute="leading" id="RpT-ul-Vqn"/>
+                <constraint firstItem="6wJ-c3-AhK" firstAttribute="top" secondItem="aYJ-Vl-U3c" secondAttribute="top" id="eYa-Z3-irS"/>
+                <constraint firstItem="6wJ-c3-AhK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="kS6-UG-w2d"/>
+            </constraints>
+            <point key="canvasLocation" x="124.6376811594203" y="156.69642857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bubble.middle.bottom.fill" catalog="system" width="128" height="110"/>
+        <image name="mappin" catalog="system" width="105" height="128"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

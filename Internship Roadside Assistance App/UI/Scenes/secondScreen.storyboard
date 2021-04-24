@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ztz-P2-cII">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="TIC-7s-NG2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Gez-g6-KJE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3kH-lZ-yVE"/>
+                    <size key="freeformSize" width="375" height="812"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tg-LT-Iyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="534"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="6L0-xt-3Ye">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ztz-P2-cII" customClass="MapViewController" customModule="Internship_Roadside_Assistance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zx6-Ek-Dey">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Y8-Xu-T9G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internship Test App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="Oaf-fP-lSg">
+                                <rect key="frame" x="96" y="46" width="183" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8z-ng-2ct">
+                                <rect key="frame" x="16" y="49" width="35" height="22"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Gez-g6-KJE" kind="show" id="03u-Vl-SkI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvl-hN-7Ys">
+                                <rect key="frame" x="74" y="710" width="227" height="38"/>
+                                <color key="backgroundColor" red="0.38340234760000003" green="0.60214728120000005" blue="0.7058976293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="oDJ-IC-Jxg"/>
+                                    <constraint firstAttribute="width" constant="227" id="xjP-Qd-rDu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Press for Assistance" image="phone" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Press for Assistance">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Light"/>
+                                                <font key="NSOriginalFont" size="22" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="openView:" destination="gwH-EP-2AK" eventType="touchUpInside" id="a2j-PU-3U3"/>
+                                    <segue destination="5QV-Lc-PXk" kind="popoverPresentation" animates="NO" popoverAnchorView="Qvl-hN-7Ys" id="7de-yX-jeg">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eMh-Sg-BPr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="w8z-ng-2ct" firstAttribute="leading" secondItem="zx6-Ek-Dey" secondAttribute="leading" constant="16" id="1re-ig-cEJ"/>
+                            <constraint firstItem="3Y8-Xu-T9G" firstAttribute="leading" secondItem="zx6-Ek-Dey" secondAttribute="leading" id="5qb-Fz-HkV"/>
+                            <constraint firstAttribute="bottom" secondItem="Qvl-hN-7Ys" secondAttribute="bottom" constant="64" id="B4t-mp-uSW"/>
+                            <constraint firstItem="3Y8-Xu-T9G" firstAttribute="top" secondItem="zx6-Ek-Dey" secondAttribute="top" id="IS3-Fr-xQ4"/>
+                            <constraint firstItem="Qvl-hN-7Ys" firstAttribute="centerX" secondItem="zx6-Ek-Dey" secondAttribute="centerX" id="izG-va-JsO"/>
+                            <constraint firstAttribute="trailing" secondItem="3Y8-Xu-T9G" secondAttribute="trailing" id="kSL-dT-5xO"/>
+                            <constraint firstAttribute="bottom" secondItem="3Y8-Xu-T9G" secondAttribute="bottom" id="loA-2S-sjL"/>
+                            <constraint firstItem="w8z-ng-2ct" firstAttribute="top" secondItem="eMh-Sg-BPr" secondAttribute="top" constant="5" id="oJt-zx-c4Y"/>
+                            <constraint firstItem="Oaf-fP-lSg" firstAttribute="top" secondItem="eMh-Sg-BPr" secondAttribute="top" constant="2" id="u7M-8j-vgp"/>
+                            <constraint firstItem="Oaf-fP-lSg" firstAttribute="centerX" secondItem="zx6-Ek-Dey" secondAttribute="centerX" id="uza-4f-LC2"/>
+                            <constraint firstAttribute="bottom" secondItem="3Y8-Xu-T9G" secondAttribute="bottom" id="wJm-QU-8uS"/>
+                            <constraint firstItem="Oaf-fP-lSg" firstAttribute="leading" secondItem="w8z-ng-2ct" secondAttribute="trailing" constant="45" id="zra-1Z-uv8"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kPy-xy-nJg" appends="YES" id="F1W-3T-8Xz"/>
+                        </connections>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="oAa-Ug-Yfz"/>
+                    <connections>
+                        <outlet property="MapView" destination="3Y8-Xu-T9G" id="n02-gB-agS"/>
+                        <outlet property="openCallViewButton" destination="Qvl-hN-7Ys" id="Kon-5J-7j2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2A-ne-aZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gwH-EP-2AK" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="kPy-xy-nJg">
+                    <connections>
+                        <segue destination="Gez-g6-KJE" kind="show" id="AQh-tl-NBT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1111.2" y="105.66502463054188"/>
+        </scene>
+        <!--Map Call View Controller-->
+        <scene sceneID="Utr-iU-Lx8">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="5QV-Lc-PXk" customClass="MapCallViewController" customModule="Internship_Roadside_Assistance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="CTk-V2-5A9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCR-ZQ-L4D">
+                                <rect key="frame" x="23" y="296.66666666666669" width="320" height="165"/>
+                                <color key="backgroundColor" red="0.82544893029999999" green="0.86008715629999999" blue="0.23898705840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="2Lc-hE-OpP"/>
+                                    <constraint firstAttribute="width" constant="320" id="ZJO-ss-27w"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Press the button below to call for roadside assistance">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="24" name="HelveticaNeue-Light"/>
+                                            <font key="NSOriginalFont" size="24" name="HelveticaNeue-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sd4-2Z-c1R">
+                                <rect key="frame" x="78" y="430" width="210" height="30"/>
+                                <color key="backgroundColor" red="0.38340234760000003" green="0.60214728120000005" blue="0.7058976293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3ey-Nd-dRv"/>
+                                    <constraint firstAttribute="width" constant="210" id="ArU-Rr-lfF"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="phone" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=" ">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content="Call for Assistance">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="groupTableViewBackgroundColor"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue-Light"/>
+                                                <font key="NSOriginalFont" size="22" name="HelveticaNeue-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callFunction:" destination="5QV-Lc-PXk" eventType="touchUpInside" id="znu-oZ-Sqo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oyl-an-VYr"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aCR-ZQ-L4D" firstAttribute="leading" secondItem="CTk-V2-5A9" secondAttribute="leading" constant="23" id="2al-pc-uBV"/>
+                            <constraint firstItem="Oyl-an-VYr" firstAttribute="bottom" secondItem="sd4-2Z-c1R" secondAttribute="bottom" constant="264" id="4T7-gH-ala"/>
+                            <constraint firstAttribute="trailing" secondItem="aCR-ZQ-L4D" secondAttribute="trailing" constant="23" id="58p-Ap-vjn"/>
+                            <constraint firstItem="aCR-ZQ-L4D" firstAttribute="centerX" secondItem="CTk-V2-5A9" secondAttribute="centerX" id="Frj-3Y-eBx"/>
+                            <constraint firstItem="aCR-ZQ-L4D" firstAttribute="centerY" secondItem="CTk-V2-5A9" secondAttribute="centerY" id="dMx-6u-IY4"/>
+                            <constraint firstItem="sd4-2Z-c1R" firstAttribute="centerX" secondItem="CTk-V2-5A9" secondAttribute="centerX" id="jsg-Wt-hk5"/>
+                            <constraint firstItem="aCR-ZQ-L4D" firstAttribute="centerY" secondItem="CTk-V2-5A9" secondAttribute="centerY" id="nk0-SV-say"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tYk-t0-WJC"/>
+                    <connections>
+                        <outlet property="callButton" destination="sd4-2Z-c1R" id="7uF-65-n7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05h-fD-JvH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1933.5999999999999" y="105.66502463054188"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AQh-tl-NBT"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
